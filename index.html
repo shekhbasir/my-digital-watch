@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(62, 31, 31);
+        }
+        #container{
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #watch{
+            height: 150px;
+            width: 350px;
+            background-color:rgb(129, 173, 211);
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+
+        }
+        .ha{
+            background-color:rgb(161, 161, 189);
+            color: rgb(228, 18, 18);
+            height: 60px;
+            width: 80px;
+        }
+        #sam{
+            margin-right: 30px;
+            background-color: #fff;
+        }
+        #sam2{
+            margin-right: 30px;
+            background-color: #9c80e3;
+        }
+        #sam3{
+            margin-right:30px;
+            background-color: #94d571;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="color: aquamarine;">DIGITAL-WATCH</h1>
+        <div  id="watch">
+            
+            <h1 class="ha" id="sam"></h1>
+            <h1 class="ha" id="sam2"></h1>
+            <h1 class="ha" id="sam3"></h1>
+        </div>
+
+    </div>
+    <script>
+
+        const watch=document.querySelector("#watch");
+        const sam=document.querySelector("#sam");
+        const sam2=document.querySelector("#sam2");
+        const sam3=document.querySelector("#sam3");
+
+        
+
+        setInterval(function(){
+            let val=new Date();
+            sam.innerHTML=`${val.getSeconds()}:sec`;
+            
+            sam2.innerHTML=`${val.getHours()}:min`;
+            
+            sam3.innerHTML=`${val.getMinutes()}:sec`;
+            watch.appendChild(sam);
+        },1000)
+    
+            // sam.innerHTML=`${val.getSeconds()}`;
+            // watch.appendChild(sam)
+        // sam.innerHTML=`${val.getSeconds()}`;
+        // watch.appendChild(sam);
+
+
+    </script>
+    
+</body>
+</html>
